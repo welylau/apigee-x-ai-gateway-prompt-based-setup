@@ -40,6 +40,8 @@ Then add controls one lab at a time: token quotas, spending budgets and Model Ar
 
 You don't need to know Apigee policies. The agent explains each decision it needs from you.
 
+> **Compatibility:** These labs were tested with **Antigravity (`agy`)**. Other AI coding agents that support skills should also work, but you'll likely need some changes, for example to the skills folder location, how skills are loaded, or the prompt wording.
+
 ---
 
 ## Quickstart: your first routed call
@@ -53,7 +55,7 @@ SKILLS=/path/to/your/agent/skills
 mkdir -p "$SKILLS"
 
 # This skill
-git clone https://github.com/rajeevramani/apigee-x-ai-gateway.git "$SKILLS/apigee-x-ai-gateway"
+git clone https://github.com/welylau/apigee-x-ai-gateway-prompt-based-setup "$SKILLS/apigee-x-ai-gateway"
 
 # Required dependency, pinned to the tested commit
 git clone https://github.com/carlosmscabral/cabral-skills.git /tmp/cabral-skills
