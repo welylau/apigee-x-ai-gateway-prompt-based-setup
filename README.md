@@ -35,8 +35,7 @@ Then add controls one lab at a time: token quotas, spending budgets and Model Ar
 - [ ] An **Apigee X org with a test environment**. An [evaluation org](https://docs.cloud.google.com/apigee/docs/api-platform/get-started/eval-orgs) works. The org itself is free, but model calls and later labs' services (Model Armor, Vertex AI) are billed separately.
 - [ ] `gcloud`, signed in with rights to import and deploy proxies. Later steps also need rights to create KVM entries, API products and apps, and in Lab 4, Model Armor resources and IAM grants. Deploy rights alone may not cover these.
 - [ ] An **OpenAI-compatible chat completions endpoint** (non-streaming), its API key, and **two model IDs** it serves
-- [ ] An **AI coding agent** that supports skills (a folder with a `SKILL.md` plus supporting files) and can read and write local files
-  - **Compatibility:** These labs were tested with **Antigravity (`agy`)**. Other AI coding agents that support skills should also work, but you'll likely need some changes, for example to the skills folder location, how skills are loaded, or the prompt wording.
+- [ ] Any AI coding agent that supports skills (a folder with a `SKILL.md` plus supporting files) and can read and write local files
 - [ ] A basic idea of [API products](https://docs.cloud.google.com/apigee/docs/api-platform/publish/what-api-product): they control which apps can call your proxy, and later hold your quota limits
 
 You don't need to know Apigee policies. The agent explains each decision it needs from you.
@@ -54,7 +53,7 @@ SKILLS=/path/to/your/agent/skills
 mkdir -p "$SKILLS"
 
 # This skill
-git clone https://github.com/welylau/apigee-x-ai-gateway-prompt-based-setup "$SKILLS/apigee-x-ai-gateway"
+git clone https://github.com/rajeevramani/apigee-x-ai-gateway.git "$SKILLS/apigee-x-ai-gateway"
 
 # Required dependency, pinned to the tested commit
 git clone https://github.com/carlosmscabral/cabral-skills.git /tmp/cabral-skills
